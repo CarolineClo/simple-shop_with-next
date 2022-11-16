@@ -8,6 +8,7 @@ function Layout({ children }) {
           <li>
             <Anchor href="/">Home</Anchor>
           </li>
+
           <li>
             <Anchor href="/products">Shop All</Anchor>
           </li>
