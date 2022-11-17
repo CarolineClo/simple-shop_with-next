@@ -7,7 +7,7 @@ export default function Home() {
         <title>Simple Shop with Next</title>
       </Head>
 
-      <h1>hello simple shop</h1>
+      <h1>Welcome to a simple shop crested with Next</h1>
     </>
   );
 }

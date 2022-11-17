@@ -3,14 +3,7 @@ import Image from "next/image";
 function product({ data }) {
   return (
     <div className="product">
-      <Image
-        src={`https://kea-alt-del.dk/t7/images/webp/640/${data.id}.webp`}
-        //src=´https://kea-alt-del.dk/t7/images/webp/1000/${data.id}.webp´
-        alt={data.productdisplayname}
-        width="592"
-        height="790"
-        priority
-      />
+      <Image src={`https://kea-alt-del.dk/t7/images/webp/640/${data.id}.webp`} alt={data.productdisplayname} width="592" height="790" priority />
       <section className="product-info">
         <h2>{data.productdisplayname}</h2>
         <p>{data.category}</p>
@@ -39,3 +32,18 @@ export async function getServerSideProps(context) {
     },
   };
 }
+
+// export async function getStaticPaths() {
+//   const res = await fetch("https://kea-alt-del.dk/t7/api/products/product");
+//   const data = await res.json();
+
+//   const paths = data.map((entry) => {
+//     return {
+//       params: { slug: entry.slug },
+//     };
+//   });
+//   return {
+//     paths,
+//     fallback: false,
+//   };
+// }
